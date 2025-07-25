@@ -36,7 +36,6 @@ The pipeline follows these steps:
 - The Lambda function is triggered when a new file is uploaded to the S3 bucket
 - The function moves the file from `raw/` to `curated/` folder in S3 and triggers an AWS Glue job to process the file
 - **Permissions**: Ensure that the Lambda function has permissions to read from the raw S3 bucket and write to the curated folder in the same S3 bucket. Also, Lambda needs permission to trigger the Glue job
- ![Lambda Diagram](assets/lambda_diagram.png)
 
 #### Set Up Event Trigger:
 - Create an S3 event notification to trigger the Lambda function when a new file is uploaded
